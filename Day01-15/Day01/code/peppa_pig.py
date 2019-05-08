@@ -1,23 +1,42 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@103022129 
+1
+0 5,699 103022129/Python-100-Days
+forked from jackfrued/Python-100-Days
+ Code  Pull requests 0  Projects 0  Wiki  Insights  Settings
+Python-100-Days/Day01-15/Day01/code/peppa_pig.py
+@hellokitty12345678 hellokitty12345678 更新了部分文檔和代碼
+3212782 on 22 Dec 2018
+205 lines (186 sloc)  3.41 KB
+    
 """
-绘制小猪佩奇
+繪制小豬佩奇
 """
 from turtle import *
 
 
 def nose(x,y):
-    """画鼻子"""
+    """畫鼻子"""
     penup()
-    # 将海龟移动到指定的坐标
+    # 將海龜移動到指定的坐標
     goto(x,y)
     pendown()
-    # 设置海龟的方向（0-东、90-北、180-西、270-南）
+    # 設置海龜的方向（0-東、90-北、180-西、270-南）
     setheading(-30)
     begin_fill()
     a = 0.4
     for i in range(120):
         if 0 <= i < 30 or 60 <= i <90:
             a = a + 0.08
-            # 向左转3度
+            # 向左轉3度
             left(3)
             # 向前走
             forward(a)
@@ -32,7 +51,7 @@ def nose(x,y):
     setheading(0)
     forward(10)
     pendown()
-    # 设置画笔的颜色(红, 绿, 蓝)
+    # 設置畫筆的顏色(紅, 綠, 藍)
     pencolor(255, 155, 192)
     setheading(10)
     begin_fill()
@@ -52,7 +71,7 @@ def nose(x,y):
 
 
 def head(x, y):
-    """画头"""
+    """畫頭"""
     color((255, 155, 192), "pink")
     penup()
     goto(x,y)
@@ -75,8 +94,8 @@ def head(x, y):
     for i in range(60):
         if 0<= i < 30 or 60 <= i < 90:
             a = a + 0.08
-            lt(3) #向左转3度
-            fd(a) #向前走a的步长
+            lt(3) #向左轉3度
+            fd(a) #向前走a的步長
         else:
             a = a - 0.08
             lt(3)
@@ -85,7 +104,7 @@ def head(x, y):
 
 
 def ears(x,y):
-    """画耳朵"""
+    """畫耳朵"""
     color((255, 155, 192), "pink")
     penup()
     goto(x, y)
@@ -111,7 +130,7 @@ def ears(x,y):
 
 
 def eyes(x,y):
-    """画眼睛"""
+    """畫眼睛"""
     color((255, 155, 192), "white")
     penup()
     setheading(90)
@@ -155,7 +174,7 @@ def eyes(x,y):
 
 
 def cheek(x,y):
-    """画脸颊"""
+    """畫臉頰"""
     color((255, 155, 192))
     penup()
     goto(x,y)
@@ -167,7 +186,7 @@ def cheek(x,y):
 
 
 def mouth(x,y):
-    """画嘴巴"""
+    """畫嘴巴"""
     color(239, 69, 19)
     penup()
     goto(x, y)
@@ -178,9 +197,9 @@ def mouth(x,y):
 
 
 def setting():
-    """设置参数"""
+    """設置參數"""
     pensize(4)
-    # 隐藏海龟
+    # 隱藏海龜
     hideturtle()
     colormode(255)
     color((255, 155, 192), "pink")
@@ -189,7 +208,7 @@ def setting():
 
 
 def main():
-    """主函数"""
+    """主函數"""
     setting() 
     nose(-100, 100)
     head(-69, 167)
@@ -202,3 +221,15 @@ def main():
 
 if __name__ == '__main__':
     main()
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
